@@ -1,0 +1,131 @@
+body {
+	color: #313131;
+	margin: 0;
+	line-height: 1.5;
+}
+
+a:link, a:visited {
+	color: #87c3fd;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+a:hover, a:active {
+	text-decoration: underline;
+	color: #b6dafd;
+}
+
+#Header {
+	margin-top: 1em;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+#Header div {
+	align-self: center;
+}
+
+#Header img {
+	padding-right: .4em;
+}
+
+#Desc {
+	color: #B0B0B0;
+}
+
+.column {
+        max-width: 960px;
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        padding: 0 10px;
+        font-family: 'PT Sans', sans-serif;
+}
+
+#Problem {
+	background-color: #ffffcc;
+	padding: .5em 1em;
+}
+
+#Screenshot {
+}
+
+#Screenshot > img {
+	display: block;
+	margin: 0 auto;
+        width: auto;
+        height: auto;
+        max-width: 100%;
+}
+
+#SecondColumn li {
+	line-height: 1.4;
+}
+
+#Downloads a {
+}
+
+#Downloads {
+	margin-bottom: 1.5em;
+}
+
+#Downloads > ul {
+	list-style-type: none;
+	padding-left: 0;
+	font-size: 1.2em;
+	margin-bottom: 0;
+}
+
+#Downloads > ul > li:nth-child(n + 2) {
+	margin-top: .25em;
+}
+
+.title {
+	font-size: 1.3em;
+}
+
+.title, .column ul {
+	margin-top: 0;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.centered {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.centered > * {
+}
+
+#Closing {
+	padding-bottom: 2em;
+}
+
+footer {
+	background-color: #313131;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: center;
+	padding: 1.2em;
+	color: white;
+	font: bold 12px sans-serif;
+}
+
+footer > a:link,
+footer > a:hover,
+footer > a:active,
+footer > a:visited {
+	color: white;
+	text-decoration: underline;
+}
+
+footer > a > img {
+	vertical-align: middle;
+	padding-right: .1em;
+}

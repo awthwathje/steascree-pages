@@ -1,9 +1,59 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>SteaScree</title>
-  </head>
-  <body>
-    <h1>SteaScree</h1>
-  </body>
-</html>
+<html lang="en" dir="ltr">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="google-site-verification" content="nssxYr3EAehWufwLtyJmca3WQpHx0BJWMJmJKok273Y">
+	<meta name="keywords" content="SteaScree, screenshots, Steam, cloud, overlay">
+
+	<link rel="icon" type="image/x-icon" href="/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="/style.css" media="screen">
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
+
+        <title>SteaScree: Steam Cloud Screenshot Uploader</title>
+	
+	<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "7aa06b1e4c9147ad928bab3dc4852189"}'></script>
+</head>
+<body>
+	<div class="column">
+		<div id="Header"><div><img src="/logo.png"></img></div><div><h1>SteaScree: <span id="Desc">Steam Cloud Screenshot Uploader</span></h1></div></div>
+		<p>SteaScree is a simple cross-platform open-source utility tool, which greatly simplifies the uploading of screenshots to the Steam Cloud, which were taken without the use of Steam's in-game overlay. You just pick pics, select game and SteaScree will do the rest.</p>
+		<p id="Problem"><b>The problem:</b> every Steam user has 20 GB of cloud space specifically for a screenshot storing. But not every screenshot can be easily uploaded to the Steam Cloud, since the files should have been created by Steam in-game overlay, thus have a specific filename, reside in specific Steam directories and be registered within a special <span id="VDF">screenshots.vdf</span> file. Steam fails to upload custom screenshots returning <b>"Steam Cloud may be temporarily unavailable"</b> error. SteaScree resolves this and automates the whole screenshot uploading preparation process.</p>
+	</div>
+
+	<div id="Screenshot"><img src="/screenshot.png"></img></div>
+
+	<div id="SecondColumn" class="column">
+		<div class="centered">
+		<p>Why you may want to take screenshots without the use of Steam overlay? Because it may produce screenshots of inferior quality compared to third-party tools, cannot be automated or even may not work for your game. Also you may want to upload screenshots for games outside of your Steam library.</p>
+		<p>Super Resolution screenshots, taken with <a href="http://www.geforce.com/hardware/technology/ansel">NVIDIA Ansel</a> technology will not be readily available for the upload to the Steam Cloud. They're too huge, too splendid. SteaScree will detect these easily and will offer you to resize them to the maximum resolution allowed by the Steam Cloud. <a href="http://steamcommunity.com/id/hrdkr/screenshot/82590107432964872">Isn't it gorgeous?</a></p>
+			<p class="title bold">SteaScree features:</p>
+			<ul>
+				<li>able to copy screenshots for different games before preparing them all for uploading</li>
+				<li>fetches game titles from Steam's public internet API</li>
+				<li>properly handles creation date</li>
+				<li>may auto-resize huge screenshots, which exceed Steam Cloud limits</li>
+				<li>supports multiple user accounts</li>
+				<li>automatically converts PNG, BMP, TIFF screenshots to JPEG</li>
+				<li>supports multiple Steam installations</li>
+				<li>supports even non-Steam games</li>
+				<li>cross-platform and open-source</li>
+			</ul>
+		</div>
+		<p>Written in C++ and built with Qt, SteaScree runs natively on all platforms which Steam supports. Now you don't have to rely on third-party Python, PowerShell or batch scripts found somewhere in the internet to get this job done.</p>
+		<div id="Downloads" class="centered">
+			<p class="title bold">Download:</p>
+			<ul>
+				<li><a href="/steascree-1.5.4-windows.exe">Windows (installer)</a></li>
+				<li><a href="/steascree-1.5.4-windows-portable.zip">Windows (portable)</a></li>
+				<li><a href="/steascree-1.5.4-macos.dmg">macOS</a></li>
+				<li><a href="/steascree-1.5.4-linux-x64.tar.gz">Linux</a></li>
+			</ul>
+		</div>
+		<p>Join <a href="http://steamcommunity.com/groups/steascree">SteaScree official Steam group</a> for the latest announcements and discussion.</p>
+		<p>SteaScree's source code is freely available <a href="https://github.com/Foyl/SteaScree">on GitHub</a>. Feel free to suggest patches or fork it if you would like.</p>
+		<p id="Closing">If you encounter any issues, please report them in the project's <a href="https://github.com/Foyl/SteaScree/issues">Issues</a> section on GitHub.</p>
+	</div>
+
+	<footer>SteaScree built with <a href="https://www.qt.io/">Qt</a>, Windows installer by <a href="https://installbuilder.bitrock.com/">BitRock</a>. <a href="mailto:awthwathje@gmail.com">Contact</a>.</footer>
+</body>
