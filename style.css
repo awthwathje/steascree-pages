@@ -95,7 +95,7 @@ code {
 /* --- deprecation notice -------------------------------------------------- */
 
 #Deprecated {
-	margin: 1.5em 0 .5em;
+	margin: 0 0 1.25em;
 	padding: 1em 1.25em;
 	background: var(--notice-bg);
 	color: var(--notice-text);
@@ -154,7 +154,7 @@ code {
 /* --- header -------------------------------------------------------------- */
 
 #Header {
-	margin: 1.5em 0 .5em;
+	margin: 1.25em 0 1em;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -173,7 +173,7 @@ code {
 
 #Desc {
 	color: var(--muted);
-	font-weight: normal;
+	font-weight: bold;  /* PT Sans has only 400 and 700; the grey keeps it secondary */
 }
 
 .lead {
