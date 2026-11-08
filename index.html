@@ -27,15 +27,15 @@
 			</header>
 
 			<aside id="Deprecated" role="note">
-				<p class="kicker">Heads up: this project is no longer maintained</p>
-				<p>SteaScree hasn't been updated since 2017 and its repository is archived. If you're new here, use <strong>SteaScreeLoaded</strong> instead: an actively developed community fork with many fixes and new features.</p>
+				<p class="kicker">This project is no longer maintained</p>
+				<p>SteaScree hasn't been updated since 2017. New users should try <strong>SteaScreeLoaded</strong>, an actively developed fork with many fixes and new features.</p>
 				<p><a class="button" href="https://github.com/Alsweider/SteaScreeLoaded">Get SteaScreeLoaded &rarr;</a></p>
-				<p class="small">The original SteaScree downloads are still <a href="#Downloads">below</a>, for anyone who needs them.</p>
+				<p class="small">The original downloads are still available <a href="#Downloads">below</a>.</p>
 			</aside>
 
-			<p class="lead">SteaScree is a simple cross-platform open-source utility tool, which greatly simplifies the uploading of screenshots to the Steam Cloud, which were taken without the use of Steam's in-game overlay. You just pick pics, select game and SteaScree will do the rest.</p>
+			<p class="lead">SteaScree is a small open-source tool that uploads screenshots taken outside Steam's in-game overlay to the Steam Cloud. Pick the pictures, choose a game, and SteaScree does the rest.</p>
 
-			<p id="Problem"><b>The problem:</b> every Steam user has 20&nbsp;GB of cloud space specifically for screenshot storing. But not every screenshot can be easily uploaded to the Steam Cloud, since the files should have been created by Steam in-game overlay, thus have a specific filename, reside in specific Steam directories and be registered within a special <code>screenshots.vdf</code> file. Steam fails to upload custom screenshots returning <b>"Steam Cloud may be temporarily unavailable"</b> error. SteaScree resolves this and automates the whole screenshot uploading preparation process.</p>
+			<p id="Problem"><b>The problem:</b> Steam gives you 20&nbsp;GB of cloud storage for screenshots, but only uploads the ones its overlay took. Those have specific file names, live in specific folders and are listed in <code>screenshots.vdf</code>. Anything else fails with <b>"Steam Cloud may be temporarily unavailable"</b>. SteaScree prepares your screenshots so Steam accepts them.</p>
 		</div>
 
 		<figure id="Screenshot">
@@ -53,42 +53,41 @@
 				<span class="pin" style="--x: 33.2%; --y: 77.6%" aria-hidden="true">5</span>
 				<span class="pin" style="--x: 66.5%; --y: 91.1%" aria-hidden="true">6</span>
 			</a>
-			<figcaption class="small">Tap the screenshot to open the full annotated version, then pinch to zoom.</figcaption>
+			<figcaption class="small">Tap the screenshot to see the full annotated version.</figcaption>
 			<ol class="notes">
-				<li>Choose Steam directory, if you have more than one.</li>
-				<li>Choose one of Steam accounts, if computer is shared among multiple players.</li>
-				<li>Choose a game or enter its ID directly.</li>
-				<li>Add some screenshots.</li>
-				<li>After all screenshots are added to this game's queue, push this and they will be copied to the respective Steam directory. You can repeat this process for another game.</li>
-				<li>When all screenshots for all games are copied, push this button and they will be registered in Steam's special file. This will make them uploadable to the Steam Cloud.</li>
+				<li>Choose your Steam folder, if you have more than one.</li>
+				<li>Choose your Steam account, if several people share the computer.</li>
+				<li>Choose a game, or enter its ID.</li>
+				<li>Add screenshots.</li>
+				<li>Copy them to the game's Steam folder. Repeat steps 3–5 for other games.</li>
+				<li>Register all copied screenshots with Steam. They're now ready to upload.</li>
 			</ol>
 		</figure>
 
 		<div class="column">
-			<p>Why you may want to take screenshots without the use of Steam overlay? Because it may produce screenshots of inferior quality compared to third-party tools, cannot be automated or even may not work for your game. Also you may want to upload screenshots for games outside of your Steam library.</p>
+			<p>Why skip the overlay? Third-party tools often take better screenshots, can be automated, and work in games where the overlay doesn't. You may also want screenshots of games outside your Steam library.</p>
 
-			<p>Super Resolution screenshots, taken with Photo Mode in the <a href="https://www.nvidia.com/en-us/software/nvidia-app/">NVIDIA app</a>, will not be readily available for the upload to the Steam Cloud. They're too huge, too splendid. SteaScree will detect these easily and will offer you to resize them to the maximum resolution allowed by the Steam Cloud. <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=851751954">Isn't it gorgeous?</a></p>
+			<p>Super Resolution shots from Photo Mode in the <a href="https://www.nvidia.com/en-us/software/nvidia-app/">NVIDIA app</a> are too big for the Steam Cloud. SteaScree spots them and offers to scale them down to the largest size Steam accepts. <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=851751954">Isn't it gorgeous?</a></p>
 
 			<section id="Features">
-				<h2>SteaScree features</h2>
+				<h2>Features</h2>
 				<ul>
-					<li>able to copy screenshots for different games before preparing them all for uploading</li>
-					<li>fetches game titles from Steam's public internet API</li>
-					<li>properly handles creation date</li>
-					<li>may auto-resize huge screenshots, which exceed Steam Cloud limits</li>
-					<li>supports multiple user accounts</li>
-					<li>automatically converts PNG, BMP, TIFF screenshots to JPEG</li>
-					<li>supports multiple Steam installations</li>
-					<li>supports even non-Steam games</li>
-					<li>cross-platform and open-source</li>
+					<li>Queue screenshots for several games, then prepare them all at once</li>
+					<li>Looks up game titles via Steam's public API</li>
+					<li>Keeps each screenshot's original date</li>
+					<li>Scales down screenshots that exceed Steam Cloud limits</li>
+					<li>Converts PNG, BMP and TIFF to JPEG</li>
+					<li>Supports multiple Steam accounts and installations</li>
+					<li>Works with non-Steam games too</li>
+					<li>Cross-platform and open source</li>
 				</ul>
 			</section>
 
-			<p>Written in C++ and built with Qt, SteaScree runs natively on all platforms which Steam supports. Now you don't have to rely on third-party Python, PowerShell or batch scripts found somewhere in the internet to get this job done.</p>
+			<p>Written in C++ with Qt, SteaScree runs natively on Windows, macOS and Linux. No more hunting for Python, PowerShell or batch scripts.</p>
 
 			<section id="Downloads">
 				<h2>Download SteaScree 1.5.4</h2>
-				<p class="small">Last release, September 2017. Unsupported: new users should grab <a href="https://github.com/Alsweider/SteaScreeLoaded">SteaScreeLoaded</a> instead.</p>
+				<p class="small">Final release, September 2017. No longer supported: new users should get <a href="https://github.com/Alsweider/SteaScreeLoaded">SteaScreeLoaded</a>.</p>
 				<ul>
 					<li><a href="/steascree-1.5.4-windows.exe">Windows <span>installer, 20&nbsp;MB</span></a></li>
 					<li><a href="/steascree-1.5.4-windows-portable.zip">Windows <span>portable .zip, 33&nbsp;MB</span></a></li>
@@ -97,11 +96,11 @@
 				</ul>
 			</section>
 
-			<p>SteaScree's source code is available on <a href="https://github.com/awthwathje/SteaScree">GitHub</a> (archived, read-only). There's also the <a href="https://steamcommunity.com/groups/steascree">SteaScree Steam group</a>.</p>
+			<p>The source code is on <a href="https://github.com/awthwathje/SteaScree">GitHub</a> (archived). There's also a <a href="https://steamcommunity.com/groups/steascree">Steam group</a>.</p>
 			<p>Thanks to everyone who used SteaScree over the years, and to <a href="https://github.com/Alsweider">Alsweider</a> for keeping it alive.</p>
 		</div>
 	</main>
 
-	<footer>SteaScree was built with <a href="https://www.qt.io/">Qt</a>, Windows installer by <a href="https://installbuilder.com/">BitRock</a>. A non-commercial hobby project. <a href="mailto:awthwathje@gmail.com">Contact</a>.</footer>
+	<footer>Built with <a href="https://www.qt.io/">Qt</a>. Windows installer by <a href="https://installbuilder.com/">BitRock</a>. A non-commercial hobby project. <a href="mailto:awthwathje@gmail.com">Contact</a>.</footer>
 </body>
 </html>
