@@ -194,20 +194,13 @@ code {
 	max-width: 1490px;
 }
 
-#Screenshot > img {
+/* transparent PNGs: screenshot.png for light, screenshot-dark.png for dark */
+#Screenshot img {
 	display: block;
 	margin: 0 auto;
 	width: 100%;
 	height: auto;
 	max-width: 1457px;
-	background: #fff;  /* the image has a white canvas, keep it so in dark mode */
-	border-radius: 6px;
-}
-
-@media (prefers-color-scheme: dark) {
-	#Screenshot > img {
-		padding: 8px;
-	}
 }
 
 /* --- sections ------------------------------------------------------------ */
