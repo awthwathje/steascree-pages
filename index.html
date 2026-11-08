@@ -10,11 +10,11 @@
 
 	<title>SteaScree: Steam Cloud Screenshot Uploader</title>
 
-	<link rel="icon" type="image/x-icon" href="/favicon.ico">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&family=PT+Mono&display=swap">
-	<link rel="stylesheet" href="/style.css?v=2026-11-08b">
+	<link rel="icon" href="/favicon.ico" sizes="48x48">
+	<link rel="icon" href="/logo.svg" type="image/svg+xml">
+	<link rel="preload" href="/fonts/pt-sans-400.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="/fonts/pt-sans-700.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="stylesheet" href="/style.css?v=2026-11-08c">
 
 	<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "7aa06b1e4c9147ad928bab3dc4852189"}'></script>
 </head>
@@ -22,7 +22,7 @@
 	<main>
 		<div class="column">
 			<header id="Header">
-				<img src="/logo.png" width="48" height="54" alt="SteaScree logo">
+				<img src="/logo.svg" width="53" height="48" alt="SteaScree logo">
 				<h1>SteaScree: <span id="Desc">Steam Cloud Screenshot Uploader</span></h1>
 			</header>
 
@@ -42,9 +42,10 @@
 			<!-- desktop: annotated screenshot; phones: bare window + numbered pins + the notes as text -->
 			<a class="shot" href="/screenshot-full.png" target="_blank" rel="noopener" title="Open the screenshot full size">
 				<picture>
-					<source media="(max-width: 700px)" srcset="/screenshot-window.png" width="722" height="482">
-					<source media="(prefers-color-scheme: dark)" srcset="/screenshot-dark.png" width="1457" height="675">
-					<img src="/screenshot.png" width="1457" height="675" alt="SteaScree main window with annotations: choose Steam directory, user ID and game, add screenshots to the queue, copy them to the game directory, then prepare them for uploading">
+					<!-- the 2016 screenshot only exists at 1x, so it's declared as such -->
+					<source media="(max-width: 700px)" srcset="/screenshot-window.png 1x" width="722" height="482">
+					<source media="(prefers-color-scheme: dark)" srcset="/screenshot-dark.png 1x" width="1457" height="675">
+					<img src="/screenshot.png" srcset="/screenshot.png 1x" width="1457" height="675" fetchpriority="high" alt="SteaScree main window with annotations: choose Steam directory, user ID and game, add screenshots to the queue, copy them to the game directory, then prepare them for uploading">
 				</picture>
 				<span class="pin" style="--x: 56.5%; --y: 16.2%" aria-hidden="true">1</span>
 				<span class="pin" style="--x: 38.3%; --y: 22%" aria-hidden="true">2</span>

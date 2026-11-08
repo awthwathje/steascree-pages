@@ -1,10 +1,31 @@
 /* SteaScree. Hand-written CSS, no framework, no build step. */
 
+/* PT Sans (SIL OFL, see fonts/OFL.txt), latin subset, self-hosted and preloaded.
+   "optional" means a slow font never makes the page jump: it's used next visit instead. */
+@font-face {
+	font-family: 'PT Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-display: optional;
+	src: url(/fonts/pt-sans-400.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+	font-family: 'PT Sans';
+	font-style: normal;
+	font-weight: 700;
+	font-display: optional;
+	src: url(/fonts/pt-sans-700.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 :root {
 	--text: #313131;
-	--muted: #8a8a8a;
+	--muted: #6b6b6b;
+	--title-muted: #8a8a8a;      /* large text only, 3:1 is enough */
 	--bg: #fbfbf8;
-	--link: #1d78c9;
+	--link: #1a6fb8;
 	--link-hover: #0f5a9e;
 	--accent: #4fc3f7;          /* the blue from the screenshot annotations */
 	--problem-bg: #ffffcc;
@@ -12,6 +33,7 @@
 	--notice-bg: #fff1e0;
 	--notice-edge: #e08a1e;
 	--notice-text: #5a3200;
+	--button-bg: #a65800;
 	--card-bg: #ffffff;
 	--card-edge: #d6dde4;
 	--footer-bg: #313131;
@@ -22,7 +44,8 @@
 @media (prefers-color-scheme: dark) {
 	:root {
 		--text: #dcdcdc;
-		--muted: #8f8f8f;
+		--muted: #9a9a9a;
+		--title-muted: #8f8f8f;
 		--bg: #1b1d20;
 		--link: #87c3fd;            /* the original link colour, at home on dark */
 		--link-hover: #b6dafd;
@@ -74,7 +97,7 @@ a:focus-visible {
 }
 
 code {
-	font-family: 'PT Mono', ui-monospace, monospace;
+	font-family: ui-monospace, Menlo, Consolas, monospace;
 	font-size: .92em;
 	background: var(--code-bg);
 	padding: .05em .3em;
@@ -133,7 +156,7 @@ code {
 	display: inline-block;
 	margin: .25em 0;
 	padding: .45em 1em;
-	background: var(--notice-edge);
+	background: var(--button-bg);
 	color: #fff;
 	border-radius: 4px;
 	font-size: 1.1em;
@@ -172,7 +195,7 @@ code {
 }
 
 #Desc {
-	color: var(--muted);
+	color: var(--title-muted);
 	font-weight: bold;  /* PT Sans has only 400 and 700; the grey keeps it secondary */
 }
 
