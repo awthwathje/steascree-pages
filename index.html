@@ -16,7 +16,17 @@
 	<link rel="preload" href="/fonts/pt-sans-700.woff2" as="font" type="font/woff2" crossorigin>
 	<link rel="stylesheet" href="/style.css?v=2026-11-08c">
 
-	<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "7aa06b1e4c9147ad928bab3dc4852189"}'></script>
+	<!-- Cloudflare Web Analytics, loaded only after the page has finished loading
+	     so the extra connection never delays the first paint -->
+	<script>
+		addEventListener('load', function () {
+			var s = document.createElement('script');
+			s.defer = true;
+			s.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+			s.setAttribute('data-cf-beacon', '{"token": "7aa06b1e4c9147ad928bab3dc4852189"}');
+			document.head.appendChild(s);
+		});
+	</script>
 </head>
 <body>
 	<main>
