@@ -194,13 +194,89 @@ code {
 	max-width: 1490px;
 }
 
-/* transparent PNGs: screenshot.png for light, screenshot-dark.png for dark */
+/* transparent PNGs: screenshot.png for light, screenshot-dark.png for dark,
+   screenshot-window.png (no callouts) for phones; click opens screenshot-full.png */
+.shot {
+	display: block;
+	position: relative;
+	max-width: 1457px;
+	margin: 0 auto;
+	cursor: zoom-in;
+}
+
 #Screenshot img {
 	display: block;
-	margin: 0 auto;
 	width: 100%;
 	height: auto;
-	max-width: 1457px;
+}
+
+#Screenshot figcaption,
+#Screenshot .notes,
+.pin {
+	display: none;
+}
+
+@media (max-width: 700px) {
+	#Screenshot {
+		padding: 0 16px;
+	}
+
+	#Screenshot img {
+		box-shadow: 0 6px 18px rgba(0, 0, 0, .28);
+	}
+
+	.pin {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		left: var(--x);
+		top: var(--y);
+		transform: translate(-50%, -50%);
+		width: 22px;
+		height: 22px;
+		border-radius: 50%;
+		background: var(--accent);
+		color: #0b2a3d;
+		border: 2px solid #fff;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, .35);
+		font: bold 12px/1 'PT Sans', system-ui, sans-serif;
+	}
+
+	#Screenshot figcaption {
+		display: block;
+		margin: .6em 0 0;
+		text-align: center;
+	}
+
+	#Screenshot .notes {
+		display: block;
+		list-style: none;
+		counter-reset: note;
+		margin: 1em 0 0;
+		padding: 0;
+	}
+
+	#Screenshot .notes li {
+		counter-increment: note;
+		position: relative;
+		padding-left: 2.1em;
+		margin-bottom: .55em;
+	}
+
+	#Screenshot .notes li::before {
+		content: counter(note);
+		position: absolute;
+		left: 0;
+		top: .1em;
+		width: 22px;
+		height: 22px;
+		border-radius: 50%;
+		background: var(--accent);
+		color: #0b2a3d;
+		font: bold 12px/22px 'PT Sans', system-ui, sans-serif;
+		text-align: center;
+	}
 }
 
 /* --- sections ------------------------------------------------------------ */
